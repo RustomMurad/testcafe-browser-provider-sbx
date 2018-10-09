@@ -1,1 +1,2 @@
 # testcafe-browser-provider-sbx
+----------
