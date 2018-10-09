@@ -38,7 +38,6 @@
     "consistent-return": "error",
     "eqeqeq": "error",
     "semi": "error",
-    "semi-spacing": ["error", {"before": false, "after": true}],
     "space-infix-ops": "error",
     "space-unary-ops": ["error", { "words": true, "nonwords": false }],
     "yoda": ["error", "never"],
@@ -76,7 +75,6 @@
     "radix": "error",
     "no-extra-parens": "error",
     "new-cap": ["error", { "capIsNew": false }],
-    "space-before-function-paren": ["error", "always"],
     "no-use-before-define" : ["error", "nofunc"],
     "handle-callback-err": "off"
   },
