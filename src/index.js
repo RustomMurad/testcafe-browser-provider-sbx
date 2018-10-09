@@ -1,4 +1,5 @@
 import { Builder } from 'selenium-webdriver';
+import { writeFileSync } from 'fs';
 
 export default {
     // Multiple browsers support
