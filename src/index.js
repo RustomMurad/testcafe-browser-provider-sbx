@@ -4,17 +4,18 @@ import { writeFileSync } from 'fs';
 export default {
     // Multiple browsers support
     isMultiBrowser: false,
-
-
-    // Required - must be implemented
-    // Browser control
+    openedBrowsers: {},
+    seleniumServer: null,
 
     /**
      * Open the browser with the given parameters
-     * @param id id of
+     * @param {number} id id of the opened browser
+     * @param {string} pageUrl url to navigate to after creating browser
+     * @param {string} browserName browser string in format 'browserName[@version][:platform]'
      */
-    async openBrowser(id, pageUrl, browserName) {
-        if (!browserName) throw new Error('Unsupported browser!');
+    async openBrowser (id, pageUrl, browserName) {
+        if (!browserName)
+            throw new Error('Unsupported browser!');
 
         const browserNameString = browserName.match(/([^@:]+)/);
         let version = browserName.match(/@([^:]+)/);
@@ -26,18 +27,16 @@ export default {
 
         browser.get(pageUrl);
         this.openedBrowsers[id] = browser;
-
         browser.manage().timeouts().implicitlyWait(80000);
     },
 
-    async closeBrowser(id) {
+    async closeBrowser (id) {
         this.openedBrowsers[id].quit();
     },
 
-
     // Optional - implement methods you need, remove other methods
     // Initialization
-    async init() {
+    async init () {
         this.seleniumServer = process.env.SELENIUM_SERVER ? process.env.SELENIUM_SERVER : 'http://localhost:4444/wd/hub';
     },
 
