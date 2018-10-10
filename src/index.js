@@ -27,7 +27,8 @@ export default {
 
         browser.get(pageUrl);
         this.openedBrowsers[id] = browser;
-        browser.manage().timeouts().implicitlyWait(80000);
+        //browser.manage().timeouts().implicitlyWait(80000);
+        browser.sleep(80000);
     },
 
     async closeBrowser (id) {
