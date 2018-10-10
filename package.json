@@ -1,6 +1,6 @@
 {
   "name": "testcafe-browser-provider-sbx",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "sbx TestCafe browser provider plugin.",
   "repository": "https://github.com/RustomMurad/testcafe-browser-provider-sbx",
   "homepage": "https://github.com/RustomMurad/testcafe-browser-provider-sbx",
